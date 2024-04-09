@@ -37,7 +37,7 @@ route
         error.passError = 'Please enter password'
     }
     if(Object.keys(error).length > 0){
-       
+     
         return res.render('login',{error : error})
     }
     
@@ -52,6 +52,11 @@ route
         }
 
     }
+
+        //new block checking
+        error.invalidUserError = 'Unauthorized entry'
+
+       
 
     res.render('login',{error : error})
 })
